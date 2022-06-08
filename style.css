@@ -18,7 +18,44 @@ body{
 }
 .battery{
     position: relative;
+}
+.battery::after{
+    content: '';
+    position: absolute;
     right: -19px;
+    top: 50%;
+    transform: translateY(-50%);
     border: 2px solid #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 15px;
+    height: 35px;
+    border-left: transparent;
+}
+.battery-changed{
+    height: 100%;
     border-radius: 10px;
+    animation: battery-changed 4s linear infinite alternate;
+}
+@keyframes battery-changed{
+    0%{
+        width: 0%;
+        background-color: #f12;
+    }
+    25%{
+        width: 25%;
+        background-color: orange;
+    }
+    50%{
+        width: 50%;
+        background-color: yellowgreen;
+    }
+    75%{
+        width: 75%;
+        background-color: greenyellow;
+    }
+    100%{
+        width: 100%;
+        background-color: green;
+    }
 }
