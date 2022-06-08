@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+}
+.battery-body{
+    width: 200px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.battery{
+    position: relative;
+    right: -19px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
